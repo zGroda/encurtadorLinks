@@ -1,0 +1,56 @@
+.containerModal {
+	position: absolute;
+	bottom: 100px;
+	background-color: #fff;
+	padding: 14px;
+	width: 700px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	animation: slideY 1.01s;
+}
+
+/*Animação SlideY*/
+
+@keyframes slideY {
+	from {
+		transform: translateY(90px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.headerModal {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.headerModal button {
+	border: 0;
+	background: transparent;
+}
+
+.containerModal span {
+	margin: 14px 0;
+	color: #a7a7a7a7;
+}
+
+.linkModal {
+	background-color: #172742;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	padding: 0 14px;
+	height: 38px;
+	border: 0;
+	border-radius: 8px;
+}
+
+@media (max-width: 735px) {
+	.containerModal {
+		width: 90%;
+	}
+}
