@@ -1,6 +1,7 @@
 import { FiLink } from 'react-icons/fi';
 import { useState } from 'react';
 
+import ModalError from '../components/ModalError';
 import Menu from '../components/Menu';
 import LinkItem from '../components/LinkItem';
 import api from '../../services/api';
@@ -12,6 +13,7 @@ export default function Home() {
 	const [link, setLink] = useState('');
 	const [data, setData] = useState({});
 	const [showModal, setShowModal] = useState(false);
+	const [showModalError, setShowModalError] = useState(false);
 
 	async function handleShorLink() {
 		try {
@@ -26,7 +28,7 @@ export default function Home() {
 
 			setLink('');
 		} catch {
-			alert('Algo deu errado!');
+			setShowModalError(true);
 			setLink('');
 		}
 	}
@@ -52,6 +54,10 @@ export default function Home() {
 			</div>
 
 			<Menu />
+
+			{showModalError && (
+				<ModalError closeModalError={() => setShowModalError(false)} />
+			)}
 
 			{showModal && (
 				<LinkItem closeModal={() => setShowModal(false)} content={data} />

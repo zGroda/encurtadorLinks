@@ -1,0 +1,41 @@
+.containerModalError {
+	position: absolute;
+	top: 120px;
+	right: 1%;
+}
+
+.containerModalError div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: rgba(255, 0, 0, 0.8);
+	border: 0;
+	border-radius: 8px;
+	animation: slideX 2s;
+	justify-content: space-between;
+}
+
+@keyframes slideX {
+	from {
+		transform: translateX(9px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+.containerModalError button {
+	display: flex;
+	align-items: center;
+	background: transparent;
+	border: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.containerModalError h1 {
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+    padding: 0 8px;
+}
